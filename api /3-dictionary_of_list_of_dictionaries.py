@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+Python script to export TODO list data of all employees in JSON format.
+"""
 
 import json
 import requests
@@ -8,6 +12,7 @@ if __name__ == "__main__":
 
     users_res = requests.get(f"{base_url}users")
     users = users_res.json()
+
     todos_res = requests.get(f"{base_url}todos")
     todos = todos_res.json()
 
