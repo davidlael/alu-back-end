@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+Python script to export employee's TODO list data in CSV format.
+"""
 
 import csv
 import requests
@@ -9,7 +13,6 @@ if __name__ == "__main__":
         emp_id = sys.argv[1]
         base_url = "https://jsonplaceholder.typicode.com/"
 
-        
         user_res = requests.get(f"{base_url}users/{emp_id}")
         user_data = user_res.json()
         username = user_data.get("username")
