@@ -1,9 +1,11 @@
+
 import json
 import requests
 
 
 if __name__ == "__main__":
     base_url = "https://jsonplaceholder.typicode.com/"
+
     users_res = requests.get(f"{base_url}users")
     users = users_res.json()
     todos_res = requests.get(f"{base_url}todos")
